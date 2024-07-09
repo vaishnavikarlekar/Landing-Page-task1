@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helping Hands: Affordable Stationary for Everyone</title>
+    <title>Helping Hands: Affordable Stationery for Everyone</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #e0f7fa; /* Light cyan background color */
-            background-image: url('back.jpg'); /* Replace with your image URL */
-            background-size: cover; /* Make the image cover the entire page */
-            background-position: center; /* Center the image */
         }
-        .header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em 0;
+        
+        .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            color: #00695c; /* Dark teal color */
             text-align: center;
+            margin-top: 20px;
+            animation: moveTitle 5s infinite alternate;
         }
+        
+        @keyframes moveTitle {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(20px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
         .container {
             padding: 20px;
             max-width: 1200px;
@@ -68,136 +83,184 @@
             margin-top: 30px;
             text-align: center;
         }
+        
+        .large-text {
+            font-size: 1.5em; /* Adjust the size as needed */
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .delivery-address {
+            display: none;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .delivery-address input, .delivery-address textarea {
+            width: calc(100% - 24px);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .delivery-address textarea {
+            resize: vertical;
+            height: 100px;
+        }
     </style>
 </head>
 <body>
-
-<div class="header">
-    <h1>Helping Hands: Affordable Stationary for Everyone</h1>
-    <p>Providing Affordable Stationary to Help Students in Need</p>
-</div>
-
-<div class="container">
-    <div class="product-list">
-        <div class="product">
-            <img src="depositphotos_37810929-stock-photo-books-on-white.jpg" alt="Notebook">
-            <h3>Notebook</h3>
-            <p>₹20.00</p>
-        </div>
-        <div class="product">
-            <img src="ink-pen.jpg" alt="Pen">
-            <h3>Pen Set</h3>
-            <p>₹10.00</p>
-        </div>
-        <div class="product">
-            <img src="9.jpg" alt="Pencil">
-            <h3>Pencil</h3>
-            <p>₹2.00</p>
-        </div>
-        <div class="product">
-            <img src="compass.jpeg" alt="Compass">
-            <h3>Compass</h3>
-            <p>₹15.00</p>
-        </div>
-        <!-- Add more products as needed -->
+    <h1 class="title">Helping Hands: Affordable Stationery for Everyone</h1>
+    <div class="container">
+        <h1 class="large-text">Providing Affordable Stationery to Help Students in Need</h1>
     </div>
 
-    <div class="delivery-options">
-        <h2>Select Your Delivery Location</h2>
-        <label for="state">State:</label>
-        <select id="state" onchange="populateCities()">
-            <option value="">Select State</option>
-            <option value="Andhra Pradesh">Andhra Pradesh</option>
-            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-            <option value="Assam">Assam</option>
-            <option value="Bihar">Bihar</option>
-            <option value="Chhattisgarh">Chhattisgarh</option>
-            <option value="Goa">Goa</option>
-            <option value="Gujarat">Gujarat</option>
-            <option value="Haryana">Haryana</option>
-            <option value="Himachal Pradesh">Himachal Pradesh</option>
-            <option value="Jharkhand">Jharkhand</option>
-            <option value="Karnataka">Karnataka</option>
-            <option value="Kerala">Kerala</option>
-            <option value="Madhya Pradesh">Madhya Pradesh</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="Manipur">Manipur</option>
-            <option value="Meghalaya">Meghalaya</option>
-            <option value="Mizoram">Mizoram</option>
-            <option value="Nagaland">Nagaland</option>
-            <option value="Odisha">Odisha</option>
-            <option value="Punjab">Punjab</option>
-            <option value="Rajasthan">Rajasthan</option>
-            <option value="Sikkim">Sikkim</option>
-            <option value="Tamil Nadu">Tamil Nadu</option>
-            <option value="Telangana">Telangana</option>
-            <option value="Tripura">Tripura</option>
-            <option value="Uttar Pradesh">Uttar Pradesh</option>
-            <option value="Uttarakhand">Uttarakhand</option>
-            <option value="West Bengal">West Bengal</option>
-            <!-- Add more states if needed -->
-        </select>
-        
-        <label for="city">City:</label>
-        <select id="city">
-            <option value="">Select City</option>
-        </select>
+    <div class="container">
+        <div class="product-list">
+            <div class="product">
+                <img src="depositphotos_37810929-stock-photo-books-on-white.jpg" alt="Notebook">
+                <h3>Notebook</h3>
+                <p>₹20.00</p>
+            </div>
+            <div class="product">
+                <img src="ink-pen.jpg" alt="Pen">
+                <h3>Pen Set</h3>
+                <p>₹10.00</p>
+            </div>
+            <div class="product">
+                <img src="9.jpg" alt="Pencil">
+                <h3>Pencil</h3>
+                <p>₹2.00</p>
+            </div>
+            <div class="product">
+                <img src="compass.jpeg" alt="Compass">
+                <h3>Compass</h3>
+                <p>₹15.00</p>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+
+        <div class="delivery-options">
+            <h2>Select Your Delivery Location</h2>
+            <label for="state">State:</label>
+            <select id="state" onchange="populateCities()">
+                <option value="">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <!-- Add more states if needed -->
+            </select>
+            
+            <label for="city">City:</label>
+            <select id="city" onchange="showAddressForm()">
+                <option value="">Select City</option>
+            </select>
+        </div>
+
+        <div class="delivery-address" id="delivery-address">
+            <h2>Delivery Address</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Enter your address"></textarea>
+            
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" placeholder="Enter your pincode">
+        </div>
+
+        <div class="about-us">
+            <h2>About Us</h2>
+            <h3>At Helping Hands, we believe that education is the key to breaking the cycle of poverty. That's why we are dedicated to providing affordable stationery to students in need. By offering low-cost notebooks, pens, pencils, and more, we ensure that every child has the tools they need to succeed in their studies. We deliver our products to schools across India, making it easier for students to access the essentials they require for their education. Join us in our mission to support the education of underprivileged children and help them achieve their dreams.</h3>
+        </div>
     </div>
 
-    <div class="about-us">
-        <h2>About Us</h2>
-        <p>At Helping Hands, we believe that education is the key to breaking the cycle of poverty. That's why we are dedicated to providing affordable stationery to students in need. By offering low-cost notebooks, pens, pencils, and more, we ensure that every child has the tools they need to succeed in their studies. We deliver our products to schools across India, making it easier for students to access the essentials they require for their education. Join us in our mission to support the education of underprivileged children and help them achieve their dreams.</p>
-    </div>
-</div>
+    <script>
+        function populateCities() {
+            const state = document.getElementById('state').value;
+            const citySelect = document.getElementById('city');
+            citySelect.innerHTML = '<option value="">Select City</option>'; // Clear previous options
 
-<script>
-    function populateCities() {
-        const state = document.getElementById('state').value;
-        const citySelect = document.getElementById('city');
-        citySelect.innerHTML = '<option value="">Select City</option>'; // Clear previous options
+            const cities = {
+                "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur"],
+                "Arunachal Pradesh": ["Itanagar", "Naharlagun"],
+                "Assam": ["Guwahati", "Dibrugarh", "Jorhat"],
+                "Bihar": ["Patna", "Gaya", "Bhagalpur"],
+                "Chhattisgarh": ["Raipur", "Bhilai", "Korba"],
+                "Goa": ["Panaji", "Margao"],
+                "Gujarat": ["Ahmedabad", "Surat", "Vadodara"],
+                "Haryana": ["Chandigarh", "Faridabad", "Gurugram"],
+                "Himachal Pradesh": ["Shimla", "Dharamshala"],
+                "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad"],
+                "Karnataka": ["Bengaluru", "Mysuru", "Mangaluru"],
+                "Kerala": ["Thiruvananthapuram", "Kochi", "Kozhikode"],
+                "Madhya Pradesh": ["Bhopal", "Indore", "Gwalior"],
+                "Maharashtra": ["Mumbai", "Pune", "Nagpur"],
+                "Manipur": ["Imphal"],
+                "Meghalaya": ["Shillong"],
+                "Mizoram": ["Aizawl"],
+                "Nagaland": ["Kohima"],
+                "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela"],
+                "Punjab": ["Amritsar", "Ludhiana", "Patiala"],
+                "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur"],
+                "Sikkim": ["Gangtok"],
+                "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai"],
+                "Telangana": ["Hyderabad", "Warangal"],
+                "Tripura": ["Agartala"],
+                "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi"],
+                "Uttarakhand": ["Dehradun", "Haridwar"],
+                "West Bengal": ["Kolkata", "Siliguri", "Durgapur"]
+                // Add more states and cities as needed
+            };
 
-        const cities = {
-            "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur"],
-            "Arunachal Pradesh": ["Itanagar", "Naharlagun"],
-            "Assam": ["Guwahati", "Dibrugarh", "Jorhat"],
-            "Bihar": ["Patna", "Gaya", "Bhagalpur"],
-            "Chhattisgarh": ["Raipur", "Bhilai", "Korba"],
-            "Goa": ["Panaji", "Margao"],
-            "Gujarat": ["Ahmedabad", "Surat", "Vadodara"],
-            "Haryana": ["Chandigarh", "Faridabad", "Gurugram"],
-            "Himachal Pradesh": ["Shimla", "Dharamshala"],
-            "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad"],
-            "Karnataka": ["Bengaluru", "Mysuru", "Mangaluru"],
-            "Kerala": ["Thiruvananthapuram", "Kochi", "Kozhikode"],
-            "Madhya Pradesh": ["Bhopal", "Indore", "Gwalior"],
-            "Maharashtra": ["Mumbai", "Pune", "Nagpur"],
-            "Manipur": ["Imphal"],
-            "Meghalaya": ["Shillong"],
-            "Mizoram": ["Aizawl"],
-            "Nagaland": ["Kohima"],
-            "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela"],
-            "Punjab": ["Amritsar", "Ludhiana", "Patiala"],
-            "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur"],
-            "Sikkim": ["Gangtok"],
-            "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai"],
-            "Telangana": ["Hyderabad", "Warangal"],
-            "Tripura": ["Agartala"],
-            "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi"],
-            "Uttarakhand": ["Dehradun", "Haridwar"],
-            "West Bengal": ["Kolkata", "Siliguri", "Durgapur"]
-            // Add more states and cities as needed
-        };
-
-        if (state && cities[state]) {
-            cities[state].forEach(city => {
-                const option = document.createElement('option');
-                option.value = city;
-                option.textContent = city;
-                citySelect.appendChild(option);
-            });
+            if (state && cities[state]) {
+                cities[state].forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    option.textContent = city;
+                    citySelect.appendChild(option);
+                });
+            }
         }
-    }
-</script>
 
+        function showAddressForm() {
+            const city = document.getElementById('city').value;
+            const addressForm = document.getElementById('delivery-address');
+            if (city) {
+                addressForm.style.display = 'block';
+            } else {
+                addressForm.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
