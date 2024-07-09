@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helping Hands: Affordable Stationary for Everyone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Light cyan background color */
+            background-image: url('back.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Make the image cover the entire page */
+            background-position: center; /* Center the image */
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            border-radius: 10px; /* Rounded corners */
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+        .delivery-options {
+            margin: 30px 0;
+            text-align: center;
+        }
+        select {
+            padding: 10px;
+            margin: 10px;
+        }
+        .about-us {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Helping Hands: Affordable Stationary for Everyone</h1>
+    <p>Providing Affordable Stationary to Help Students in Need</p>
+</div>
+
+<div class="container">
+    <div class="product-list">
+        <div class="product">
+            <img src="depositphotos_37810929-stock-photo-books-on-white.jpg" alt="Notebook">
+            <h3>Notebook</h3>
+            <p>₹20.00</p>
+        </div>
+        <div class="product">
+            <img src="ink-pen.jpg" alt="Pen">
+            <h3>Pen Set</h3>
+            <p>₹10.00</p>
+        </div>
+        <div class="product">
+            <img src="9.jpg" alt="Pencil">
+            <h3>Pencil</h3>
+            <p>₹2.00</p>
+        </div>
+        <div class="product">
+            <img src="compass.jpeg" alt="Compass">
+            <h3>Compass</h3>
+            <p>₹15.00</p>
+        </div>
+        <!-- Add more products as needed -->
+    </div>
+
+    <div class="delivery-options">
+        <h2>Select Your Delivery Location</h2>
+        <label for="state">State:</label>
+        <select id="state" onchange="populateCities()">
+            <option value="">Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+            <!-- Add more states if needed -->
+        </select>
+        
+        <label for="city">City:</label>
+        <select id="city">
+            <option value="">Select City</option>
+        </select>
+    </div>
+
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>At Helping Hands, we believe that education is the key to breaking the cycle of poverty. That's why we are dedicated to providing affordable stationery to students in need. By offering low-cost notebooks, pens, pencils, and more, we ensure that every child has the tools they need to succeed in their studies. We deliver our products to schools across India, making it easier for students to access the essentials they require for their education. Join us in our mission to support the education of underprivileged children and help them achieve their dreams.</p>
+    </div>
+</div>
+
+<script>
+    function populateCities() {
+        const state = document.getElementById('state').value;
+        const citySelect = document.getElementById('city');
+        citySelect.innerHTML = '<option value="">Select City</option>'; // Clear previous options
+
+        const cities = {
+            "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur"],
+            "Arunachal Pradesh": ["Itanagar", "Naharlagun"],
+            "Assam": ["Guwahati", "Dibrugarh", "Jorhat"],
+            "Bihar": ["Patna", "Gaya", "Bhagalpur"],
+            "Chhattisgarh": ["Raipur", "Bhilai", "Korba"],
+            "Goa": ["Panaji", "Margao"],
+            "Gujarat": ["Ahmedabad", "Surat", "Vadodara"],
+            "Haryana": ["Chandigarh", "Faridabad", "Gurugram"],
+            "Himachal Pradesh": ["Shimla", "Dharamshala"],
+            "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad"],
+            "Karnataka": ["Bengaluru", "Mysuru", "Mangaluru"],
+            "Kerala": ["Thiruvananthapuram", "Kochi", "Kozhikode"],
+            "Madhya Pradesh": ["Bhopal", "Indore", "Gwalior"],
+            "Maharashtra": ["Mumbai", "Pune", "Nagpur"],
+            "Manipur": ["Imphal"],
+            "Meghalaya": ["Shillong"],
+            "Mizoram": ["Aizawl"],
+            "Nagaland": ["Kohima"],
+            "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela"],
+            "Punjab": ["Amritsar", "Ludhiana", "Patiala"],
+            "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur"],
+            "Sikkim": ["Gangtok"],
+            "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai"],
+            "Telangana": ["Hyderabad", "Warangal"],
+            "Tripura": ["Agartala"],
+            "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi"],
+            "Uttarakhand": ["Dehradun", "Haridwar"],
+            "West Bengal": ["Kolkata", "Siliguri", "Durgapur"]
+            // Add more states and cities as needed
+        };
+
+        if (state && cities[state]) {
+            cities[state].forEach(city => {
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
