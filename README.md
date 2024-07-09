@@ -23,9 +23,9 @@ You will need a web browser and a basic text editor.
 ### Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/helping-hands.git
+    git clone https://github.com/vaishnavikarlekar/Landing-page-task1.git
     ```
-2. Open `index.html` in your web browser to view the landing page.
+2. Open `Landingpage.html` in your web browser to view the landing page.
 
 ## Usage
 - Navigate through the product listings to view available stationery items.
